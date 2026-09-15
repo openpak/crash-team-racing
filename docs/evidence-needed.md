@@ -5,7 +5,7 @@ replacement is plausible, unproven, and possibly unnecessary. This is the
 ordered list that decides it. **Cheapest and most decisive first — E1 can close
 the repository outright, so do not run E2 before E1.**
 
-Read `servers/shared-docs/online-compatibility-playbook.md` (layered model,
+Read `docs/shared/online-compatibility-playbook.md` (this repo's trimmed copy; canonical `Openpak/docs/playbooks/`) (layered model,
 experiment discipline) and `emulator-launch-protocol.md` before touching an
 emulator. In particular:
 
@@ -29,7 +29,7 @@ In `Openpak/emulators/citron`, all default-off:
 TLS verification is bypassed in citron's OpenSSL backend, so a self-signed
 certificate generated in memory is enough for any stub. Log:
 `~/.local/share/citron/log/citron_log.txt`, truncated on every start. Per-title
-profile isolation: `servers/shared-docs/citron-isolation.md`.
+profile isolation: `docs/shared/citron-isolation.md`.
 
 ## E0 — get the title
 
