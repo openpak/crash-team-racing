@@ -14,17 +14,16 @@ emulator. In particular:
   off `/tmp` (tmpfs — filling it kills the shell tool). Disk-backed scratch on
   the pool only.
 - Other titles share this machine. Never broad-`pkill`; identify instances by
-  full binary path and by their `OPENPAK_*` environment.
+  full binary path and by their data directory.
 
 ## Tooling that already exists
 
-In `Openpak/emulators/citron`, all default-off:
-
-| Control | Effect |
-|---|---|
-| `OPENPAK_CTR_AUTH_IP=<ip>` | Redirects `lavender-switch-auth3.prod.demonware.net` and `lavender-switch-lobby.prod.demonware.net` (exact host, both resolution paths) |
-| `OPENPAK_CTR_AUTH_PORT=<port>` | Moves the destination off 443 when 443 is taken locally (`ss -ltnp`) |
-| `OPENPAK_ENABLE=1` + `OPENPAK_SERVER_IP` | The Nintendo-side redirect — identity only; it does **not** touch Demonware |
+The per-title redirect env hooks (auth IP/port) lived in the retired Citron fork
+and nothing reads them any more. Under Harbor, redirect
+`lavender-switch-auth3.prod.demonware.net` and `lavender-switch-lobby.prod.demonware.net`
+by exact host through the OpenPak DNS/hosts override, and pick another local port
+if 443 is taken (`ss -ltnp`). The Nintendo-side redirect (OpenPak identity) does
+**not** touch Demonware.
 
 TLS verification is bypassed in citron's OpenSSL backend, so a self-signed
 certificate generated in memory is enough for any stub. Log:
@@ -46,8 +45,8 @@ Until E0, this whole file is unrunnable and the repository stays as it is.
 stub, no server work.
 
 - **Method.** Boot the title in citron with the OpenPak identity stack only —
-  `OPENPAK_ENABLE=1`, `OPENPAK_SERVER_IP=<our BAAS>`, `OPENPAK_CTR_AUTH_IP`
-  **unset**, so Nintendo names go to us and Demonware names go to production.
+  the Nintendo-side redirect pointed at our BAAS and no Demonware override
+  **set**, so Nintendo names go to us and Demonware names go to production.
   Sign in, enter Online, and watch `citron_log.txt` for the connections to the
   two `prod.demonware.net` hosts.
 - **Decision rule.**
@@ -66,8 +65,8 @@ stub, no server work.
 Answers U1 and U4.
 
 - **Method.** A throwaway TLS-terminating stub on a spare port (self-signed,
-  in-memory key, never written to disk), `OPENPAK_CTR_AUTH_IP=127.0.0.1`,
-  `OPENPAK_CTR_AUTH_PORT=<port>`. Accept, log the first bytes the client sends
+  in-memory key, never written to disk), the two Demonware hosts redirected
+  to `127.0.0.1:<port>`. Accept, log the first bytes the client sends
   as hex, answer nothing. Do the same for the lobby host in a second run.
 - **Decision rule.**
   - Bytes look like HTTP (`GET`/`POST`, or an HTTP/2 preface) → it is a modern
