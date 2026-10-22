@@ -1,7 +1,7 @@
 # Crash Team Racing Nitro-Fueled on Nintendo Switch — network stack and feasibility
 
 Status: **research verdict, 2026-09-09. No implementation this round.**
-Author: tobagin. Clean room: no earlier source was read for this document; see
+Author: tobagin. Clean room: no source from a non-free implementation was read for this document; see
 [Provenance](#provenance).
 
 ## Verdict, in one paragraph
@@ -168,11 +168,9 @@ Written as unknowns on purpose. Each maps to an experiment.
 - Public sources are linked inline.
 - First-hand facts come from **OpenPak's own tree**: the citron redirect hooks in
   `emulators/citron` cited above. Those hooks record a live observation and a
-  static-analysis result; their original evidence log lives in a
-  source-available-Shield-licensed repository which **was not opened** for this document
-  and must not be. E2 re-derives the same facts from our own capture, which is
+  static-analysis result. E2 re-derives the same facts from our own capture, which is
   the only version of them this project is allowed to build on.
-- No earlier source, layout, type names or handler names were read or mirrored.
+- No source, layout, type names or handler names from a non-free implementation were read or mirrored.
 
 [kinnay]: https://github.com/kinnay/NintendoClients/wiki
 [bandi]: https://crashbandicoot.fandom.com/wiki/Crash_Team_Racing_Nitro-Fueled
