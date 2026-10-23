@@ -1,5 +1,13 @@
 # Crash Team Racing Nitro-Fueled on Nintendo Switch — network stack and feasibility
 
+> **Current Switch client (2026-10-13): Harbor**, at
+> `~/REPOS/Openpak/emulators/harbor`. Harbor is an independent
+> OpenPak project based on Eden. Citron, Ryujinx (desktop and Android), and
+> the former OpenPak Eden checkouts have been removed. References to those
+> forks below record historical evidence only: do not run their commands,
+> reinstall them, or select them for current work. Use Harbor's README and
+> current handoff for builds and testing; old results do not establish Harbor parity.
+
 Status: **research verdict, 2026-09-09. No implementation this round.**
 Author: tobagin. Clean room: no source from a non-free implementation was read for this document; see
 [Provenance](#provenance).
@@ -11,7 +19,7 @@ Activision's own backend, over TLS on port 443 to
 `lavender-switch-auth3.prod.demonware.net` and
 `lavender-switch-lobby.prod.demonware.net`. Nintendo's NEX, NPLN and BAAS carry
 none of its online traffic. So this repository is the right shape and it must
-**not** be folded into [`servers/nex`](../../nex).
+**not** be folded into [`platforms/switch/games/switch-nex`](../../switch-nex).
 
 Feasibility is **plausible but unproven, and possibly unnecessary**. Unlike
 [`fall-guys`](../../fall-guys), there is no authoritative server simulation to
