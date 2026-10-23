@@ -37,7 +37,7 @@ no code ships this round.
 
 | Fact | Source | Strength |
 |---|---|---|
-| The client resolves `lavender-switch-auth3.prod.demonware.net` and `lavender-switch-lobby.prod.demonware.net` | Our own citron tree: `emulators/citron/src/core/hle/service/sockets/sfdnsres.cpp:206-230` — an exact-host redirect hook whose comment records "confirmed live 2026-08-31" | **Decisive.** Observed console behaviour, the strongest input the [clean-room policy](https://github.com/openpak/docs/blob/main/clean-room-policy.md) admits |
+| The client resolves `lavender-switch-auth3.prod.demonware.net` and `lavender-switch-lobby.prod.demonware.net` | Our own citron tree: `emulators/citron/src/core/hle/service/sockets/sfdnsres.cpp:206-230` — an exact-host redirect hook whose comment records "confirmed live 2026-08-31" | **Decisive.** Observed console behaviour, the strongest input the [clean-room policy](https://docs.openpak.org/contributors/clean-room/) admits |
 | Both hosts are dialled on **443** | `emulators/citron/src/core/hle/service/sockets/bsd.cpp:1908-1930` — the companion port-remap block rewrites destination port 443 | Decisive, same origin |
 | The client's own symbols include `igNetTaskLsgGetTicket` and `igNetTaskLsgAuthenticateTicket` | Static analysis of the title's binary, recorded in the same hook comment | Strong |
 | Nintendo's documented Switch NEX game servers do not include this title | [kinnay/NintendoClients wiki][kinnay] lists first-party servers only | Weak (absence of evidence), consistent |
@@ -139,7 +139,7 @@ content, the Pit Stop economy, anti-cheat, telemetry.
 ### Ports
 
 **No block is claimed.** The 22600–22699 third-party range in
-[`ports.md`](../../../ports.md) has 22600–22609 taken by
+[`ports.md`](https://docs.openpak.org/contributors/ports/) has 22600–22609 taken by
 [`among-us`](../../among-us); this project takes the next free ten in the PR that
 first ships a listener, and not before.
 

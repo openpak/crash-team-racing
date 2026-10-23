@@ -53,13 +53,13 @@ So: no Go, no port block, no deploy target, until E1 answers.
 
 ## Ground rules
 
-- Clean room. Read [`docs/clean-room-policy.md`](https://github.com/openpak/docs/blob/main/clean-room-policy.md)
+- Clean room. Read [clean-room policy](https://docs.openpak.org/contributors/clean-room/)
   before writing a line. Public protocol documentation, our own captures, and
   compatibly licensed code are the only inputs. Provenance for this study is
   recorded at the end of `docs/design.md`.
 - AGPL-3.0-only, English only, Go 1.25, no secrets in the repository — and no
   extracted key material, ever, however convenient.
-- Ports come from [`ports.md`](../../ports.md). Claim a block in the PR that
+- Ports come from [`ports.md`](https://docs.openpak.org/contributors/ports/). Claim a block in the PR that
   first needs one.
 
 This project is not affiliated with or endorsed by Nintendo, Activision, Beenox,

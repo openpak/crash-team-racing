@@ -13,8 +13,8 @@ replacement is plausible, unproven, and possibly unnecessary. This is the
 ordered list that decides it. **Cheapest and most decisive first — E1 can close
 the repository outright, so do not run E2 before E1.**
 
-Read `https://github.com/openpak/docs/blob/main/playbooks/online-compatibility-playbook.md` (layered model,
-experiment discipline) and `emulator-launch-protocol.md` before touching an
+Read `https://docs.openpak.org/contributors/online-compatibility/` (layered model,
+experiment discipline) and the emulator launch protocol (internal research notes) before touching an
 emulator. In particular:
 
 - One variable per run; a failed experiment is a result.
@@ -36,7 +36,7 @@ if 443 is taken (`ss -ltnp`). The Nintendo-side redirect (OpenPak identity) does
 TLS verification is bypassed in citron's OpenSSL backend, so a self-signed
 certificate generated in memory is enough for any stub. Log:
 `~/.local/share/citron/log/citron_log.txt`, truncated on every start. Per-title
-one instance per data dir: <https://github.com/openpak/docs/blob/main/playbooks/online-compatibility-playbook.md> §0.
+one instance per data dir: <https://docs.openpak.org/contributors/online-compatibility/> §0.
 
 ## E0 — get the title
 
