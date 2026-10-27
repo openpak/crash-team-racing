@@ -40,12 +40,9 @@ one instance per data dir: <https://docs.openpak.org/contributors/online-compati
 
 ## E0 — get the title
 
-**Blocking. Nothing below can run without it.** There is no CTR:NF dump on this
-machine (checked 2026-09-09: no NSP/XCI, no save under `switch backup/JKSV`, no
-citron entry). Needed: a dump of the user's own cartridge, base plus the active
-update, kept on the pool, never in a repository.
-
-Until E0, this whole file is unrunnable and the repository stays as it is.
+**Resolved 2026-10-27.** Base v0 + update v983040 dumps are on the pool
+(switch Games/Updates). Previously blocking (checked 2026-09-09: no NSP/XCI);
+that note is superseded. Dumps stay on the pool, never in a repository.
 
 ## E1 — does real Demonware accept an OpenPak console?
 
