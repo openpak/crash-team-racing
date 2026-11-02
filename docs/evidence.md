@@ -1,6 +1,6 @@
 # Evidence: crash-team-racing
 
-## Static key-check (2026-10-27, base v0)
+## Static key-check (base v0)
 
 E0 resolved: base v0 + update v983040 dumps on the pool. Base program NCA
 (standard crypto, SDK 6.5.2.0) decompressed and swept:
@@ -21,12 +21,3 @@ E0 resolved: base v0 + update v983040 dumps on the pool. Base program NCA
   via `CConsoleId::getHardwareId`. Exact ticket fields need E2/E3.
 - Crypto is standard: LibTomCrypt + `bdCryptoUtils` (HKDF, HMAC-SHA1).
 - No NEX/Photon/PlayFab. Full notes in workspace research (RECON, private).
-
-## Next experiment
-
-And one cheaper question comes before all of it. OpenPak redirects *Nintendo*
-hostnames; it does not redirect `*.demonware.net`. An OpenPak console still
-reaches the real, still-running Demonware. **If Demonware accepts it, this title
-already works and this repository should close.** That experiment
-([E1](evidence-needed.md#e1--does-real-demonware-accept-an-openpak-console))
-is one afternoon and it is unrun.

@@ -1,6 +1,6 @@
 # Notes: crash-team-racing
 
-> **Current Switch client (2026-10-13): Harbor**, at
+> **Current Switch client: Harbor**, at
 > `~/REPOS/Openpak/emulators/harbor`. Harbor is an independent
 > OpenPak project based on Eden. Citron, Ryujinx (desktop and Android), and
 > the former OpenPak Eden checkouts have been removed. References to those
@@ -11,10 +11,7 @@
 Feasibility study for replacing the network **Crash Team Racing Nitro-Fueled**
 uses on Nintendo Switch.
 
-## Status: documentation only. No code, and none until the first experiment runs.
-
-Whether it should hold any code is a different question, and the honest answer
-today is *we do not know yet*:
+## Background
 
 - Racing is peer-to-peer, so there is no server-side game simulation to
   reimplement. That makes this far more tractable than
@@ -27,14 +24,11 @@ today is *we do not know yet*:
   443 rather than the plain TCP that prior art targets, and matchmaking — the
   part the game actually needs to race — has no public prior art at all.
 
-So: no Go, no port block, no deploy target, until E1 answers.
-
 - [`docs/design.md`](design.md) — the stack, the evidence, the verdict, and
   the plan that applies only if the replacement turns out to be needed.
 - [`docs/evidence-needed.md`](evidence-needed.md) — the experiments in
   order, cheapest first, with the tooling already present in
-  `Openpak/emulators/citron`. Blocked on E0: there is no dump of this title on
-  this machine.
+  `Openpak/emulators/citron`.
 
 ## Ground rules
 
