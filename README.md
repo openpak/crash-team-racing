@@ -22,11 +22,11 @@ There is no server code in this repository, so there is no build or run command.
 ## Docs
 
 - [Protocol](docs/protocol.md)
-- [Evidence](docs/evidence.md)
 - [Deploy](docs/deploy.md)
-- [Notes](docs/notes.md)
 - [Design](docs/design.md)
 - [Evidence needed](docs/evidence-needed.md)
+
+PRDs: openpak/prds (private)
 
 Live compatibility status: [openpak.org/titles#t-20](https://openpak.org/titles#t-20).
 
